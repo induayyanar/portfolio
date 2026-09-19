@@ -1,0 +1,521 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #020817;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    background: #030916;
+    border-bottom: 1px solid #171d32;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    font-size: 45px;
+    font-weight: 500;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #c026ff
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.profile-name h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.profile-name p {
+    font-size: 11px;
+    color: #d0d0d0;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+nav a {
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    padding: 30px 0;
+}
+
+nav a:hover {
+    color: #b56cff;
+}
+
+nav a.active {
+    color: #b45cff;
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #b34cff;
+
+    box-shadow: 0 0 10px #a63cff;
+}
+
+
+/* CONNECT BUTTON */
+
+.connect-btn {
+    text-decoration: none;
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #7442e8,
+        #a83cff
+    );
+
+    font-size: 13px;
+
+    box-shadow: 0 0 20px rgba(140, 50, 255, 0.3);
+
+    transition: 0.3s;
+}
+
+.connect-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(150, 60, 255, 0.6);
+}
+
+.connect-btn i {
+    margin-right: 8px;
+}
+
+
+/* ================= MAIN SECTION ================= */
+
+.achievement-section {
+    position: relative;
+    padding: 40px 65px 70px;
+
+    overflow: hidden;
+}
+
+
+/* ================= HEADING ================= */
+
+.heading-area {
+    width: 55%;
+}
+
+.small-title {
+    color: #bd6cff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.small-title i {
+    margin-right: 10px;
+}
+
+
+.heading-area h1 {
+    font-size: 46px;
+    line-height: 1.2;
+
+    font-weight: 600;
+}
+
+.heading-area h1 span {
+    color: #914cff;
+
+    background: linear-gradient(
+        90deg,
+        #914cff,
+        #c346ff
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.heading-line {
+    width: 48px;
+    height: 3px;
+
+    margin-top: 15px;
+
+    background: #a844ff;
+
+    box-shadow: 0 0 12px #a844ff;
+}
+
+
+.heading-area p {
+    max-width: 540px;
+
+    margin-top: 16px;
+
+    color: #e0e0e0;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* ================= TROPHY ================= */
+
+.trophy-area {
+    position: absolute;
+
+    right: 100px;
+    top: 15px;
+
+    width: 390px;
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trophy {
+    font-size: 125px;
+
+    filter:
+        drop-shadow(0 0 12px #7c35ff)
+        drop-shadow(0 0 30px #a53cff);
+
+    z-index: 2;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* trophy glow */
+
+.trophy-glow {
+    position: absolute;
+
+    width: 230px;
+    height: 100px;
+
+    background: #7c2cff;
+
+    filter: blur(70px);
+
+    opacity: 0.25;
+}
+
+
+/* ================= AWARDS GRID ================= */
+
+.awards-grid {
+
+    margin-top: 35px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+}
+
+
+/* ================= AWARD CARD ================= */
+
+.award-card {
+
+    display: grid;
+
+    grid-template-columns: 55% 45%;
+
+    min-height: 240px;
+
+    border: 1px solid #252d48;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: rgba(6, 14, 30, 0.85);
+
+    transition: 0.3s;
+
+    box-shadow: inset 0 0 25px rgba(100, 50, 255, 0.03);
+}
+
+
+.award-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #773bff;
+
+    box-shadow:
+        0 0 25px rgba(120, 50, 255, 0.18);
+}
+
+
+/* ================= IMAGE ================= */
+
+.award-image {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.award-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+
+.award-card:hover .award-image img {
+    transform: scale(1.05);
+}
+
+
+/* ================= CONTENT ================= */
+
+.award-content {
+
+    padding: 22px 25px;
+
+    border-left: 1px solid #242b42;
+
+    position: relative;
+}
+
+
+.award-icon {
+
+    font-size: 27px;
+
+    color: #a13fff;
+
+    margin-bottom: 5px;
+
+    filter: drop-shadow(0 0 7px #8c35ff);
+}
+
+
+.award-content h2 {
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+
+.award-content h3 {
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    color: #bd67ff;
+
+    margin-bottom: 17px;
+}
+
+
+.award-content p {
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    color: #dedede;
+
+    margin-bottom: 18px;
+}
+
+
+.date {
+
+    font-size: 12px;
+
+    color: #d8d8d8;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: auto;
+}
+
+.date i {
+    color: #eeeeee;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+
+    nav {
+        gap: 18px;
+    }
+
+    .connect-btn {
+        display: none;
+    }
+
+    .trophy-area {
+        right: 30px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .achievement-section {
+        padding: 35px 25px;
+    }
+
+    .heading-area {
+        width: 100%;
+    }
+
+    .heading-area h1 {
+        font-size: 38px;
+    }
+
+    .trophy-area {
+        display: none;
+    }
+
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 35px;
+    }
+
+    .profile-name h2 {
+        font-size: 15px;
+    }
+
+    .profile-name p {
+        font-size: 9px;
+    }
+
+    .heading-area h1 {
+        font-size: 32px;
+    }
+
+    .heading-area p {
+        font-size: 13px;
+    }
+
+    .award-card {
+        grid-template-columns: 1fr;
+    }
+
+    .award-image {
+        height: 220px;
+    }
+
+    .award-content {
+        border-left: none;
+        border-top: 1px solid #242b42;
+    }
+
+}

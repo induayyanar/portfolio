@@ -1,0 +1,1442 @@
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(73, 38, 180, 0.12),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 15% 75%,
+            rgba(30, 60, 180, 0.08),
+            transparent 30%
+        ),
+        #020817;
+
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 42px;
+
+    background: rgba(2, 8, 23, 0.92);
+
+    border-bottom: 1px solid rgba(61, 89, 255, 0.55);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* Logo */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+    font-style: italic;
+    font-weight: bold;
+
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #6d5dfc,
+        #9f4df5
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-line {
+    width: 1px;
+    height: 34px;
+
+    background: rgba(255,255,255,0.7);
+}
+
+.name {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-links a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a855f7;
+}
+
+.nav-links a.active {
+    color: #a855f7;
+    font-weight: 600;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -27px;
+
+    height: 4px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #c026d3
+    );
+
+    box-shadow:
+        0 0 10px #7c3aed,
+        0 0 20px #9333ea;
+}
+
+
+/* Connect Button */
+
+.connect-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 21px;
+
+    border-radius: 14px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    background: linear-gradient(
+        100deg,
+        #009cff,
+        #7c3aed,
+        #a855f7
+    );
+
+    box-shadow:
+        0 0 15px rgba(93, 74, 255, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.connect-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(137, 72, 255, 0.65);
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.skills-page {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: auto;
+
+    padding: 35px 52px 45px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.skills-hero {
+    min-height: 290px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    padding-left: 25px;
+}
+
+
+/* Badge */
+
+.skills-badge {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 7px 17px;
+
+    border: 1px solid #6847ff;
+
+    border-radius: 25px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(75, 54, 255, 0.16),
+            rgba(106, 44, 255, 0.05)
+        );
+
+    box-shadow:
+        inset 0 0 15px rgba(83, 56, 255, 0.1);
+
+    font-size: 14px;
+}
+
+.skills-badge i {
+    color: #ffffff;
+}
+
+
+/* Hero heading */
+
+.hero-content h1 {
+    margin-top: 13px;
+
+    font-size: clamp(42px, 4vw, 58px);
+
+    line-height: 1.12;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+.hero-content h1 span {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        #d000ff,
+        #6c5ce7,
+        #008cff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Hero paragraph */
+
+.hero-content p {
+    max-width: 560px;
+
+    margin-top: 16px;
+
+    color: #d0d7f5;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+/* Hero line */
+
+.hero-line {
+    display: flex;
+
+    margin-top: 18px;
+
+    gap: 3px;
+}
+
+.hero-line span:first-child {
+    width: 80px;
+    height: 5px;
+
+    border-radius: 10px;
+
+    background: #b000ff;
+
+    box-shadow: 0 0 10px #b000ff;
+}
+
+.hero-line span:last-child {
+    width: 20px;
+    height: 5px;
+
+    border-radius: 10px;
+
+    background: #00bfff;
+
+    box-shadow: 0 0 10px #00bfff;
+}
+
+
+/* =====================================================
+   HERO VISUAL
+===================================================== */
+
+.hero-visual {
+    height: 290px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Orbit */
+
+.orbit {
+    position: absolute;
+
+    border: 1px solid #4130f8;
+
+    border-radius: 50%;
+
+    transform: rotate(-12deg);
+
+    box-shadow:
+        0 0 8px rgba(92, 61, 255, 0.45);
+}
+
+.orbit-one {
+    width: 470px;
+    height: 220px;
+}
+
+.orbit-two {
+    width: 400px;
+    height: 180px;
+
+    border-color: #9c4cff;
+
+    transform: rotate(10deg);
+}
+
+
+/* Laptop */
+
+.laptop {
+    position: relative;
+
+    width: 300px;
+
+    z-index: 5;
+
+    transform: perspective(700px) rotateX(5deg) rotateY(-5deg);
+}
+
+
+/* Screen */
+
+.laptop-screen {
+    height: 185px;
+
+    border: 7px solid #17234f;
+
+    border-radius: 12px 12px 5px 5px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111c55,
+            #070b28
+        );
+
+    box-shadow:
+        0 0 25px rgba(48, 73, 255, 0.55),
+        inset 0 0 20px rgba(21, 53, 255, 0.25);
+
+    padding: 22px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Screen top */
+
+.screen-top {
+    width: 80px;
+    height: 5px;
+
+    background: #008cff;
+
+    border-radius: 10px;
+
+    margin-bottom: 13px;
+
+    box-shadow: 0 0 10px #008cff;
+}
+
+
+/* Code lines */
+
+.code-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.code-lines span {
+    display: block;
+
+    height: 4px;
+
+    border-radius: 10px;
+
+    background: #284cff;
+
+    box-shadow: 0 0 6px #284cff;
+}
+
+.code-lines span:nth-child(1) {
+    width: 110px;
+}
+
+.code-lines span:nth-child(2) {
+    width: 160px;
+}
+
+.code-lines span:nth-child(3) {
+    width: 125px;
+}
+
+.code-lines span:nth-child(4) {
+    width: 175px;
+}
+
+.code-lines span:nth-child(5) {
+    width: 90px;
+}
+
+
+/* Code symbol */
+
+.code-symbol {
+    position: absolute;
+
+    right: 48px;
+    bottom: 45px;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    color: #00c6ff;
+
+    text-shadow:
+        0 0 8px #00aaff,
+        0 0 20px #004cff;
+}
+
+
+/* Laptop base */
+
+.laptop-base {
+    width: 340px;
+    height: 15px;
+
+    margin-left: -20px;
+
+    border-radius: 0 0 25px 25px;
+
+    background: linear-gradient(
+        90deg,
+        #16245e,
+        #3155d9,
+        #18275f
+    );
+
+    box-shadow:
+        0 8px 10px rgba(0,0,0,0.4);
+}
+
+
+/* Tech icons */
+
+.tech-icon {
+    width: 55px;
+    height: 55px;
+
+    position: absolute;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 30px;
+
+    background: rgba(3, 12, 40, 0.9);
+
+    border: 1px solid #1766ff;
+
+    box-shadow:
+        0 0 15px rgba(0, 102, 255, 0.6);
+}
+
+.python-orbit {
+    top: 20px;
+    left: 17%;
+}
+
+.python-orbit i {
+    color: #ffd43b;
+}
+
+.dart-orbit {
+    top: 8px;
+    right: 16%;
+}
+
+.dart-orbit i {
+    color: #38bdf8;
+}
+
+.database-orbit {
+    right: 11%;
+    bottom: 40px;
+
+    color: #c084fc;
+}
+
+.flutter-orbit {
+    left: 18%;
+    bottom: 38px;
+}
+
+.flutter-orbit i {
+    color: #38bdf8;
+}
+
+
+/* Learn Build Grow */
+
+.grow-text {
+    position: absolute;
+
+    right: -20px;
+    top: 65px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: cursive;
+
+    font-size: 25px;
+
+    line-height: 1.25;
+
+    color: #c46cff;
+
+    transform: rotate(-7deg);
+
+    z-index: 10;
+
+    text-shadow:
+        0 0 10px rgba(180, 70, 255, 0.5);
+}
+
+.heart {
+    position: absolute;
+
+    right: -25px;
+    bottom: 8px;
+
+    font-size: 24px;
+}
+
+.underline {
+    width: 75px;
+    height: 3px;
+
+    margin-top: 8px;
+
+    background: #c46cff;
+
+    border-radius: 20px;
+
+    transform: rotate(-3deg);
+
+    box-shadow: 0 0 8px #c46cff;
+}
+
+
+/* =====================================================
+   SKILLS GRID
+===================================================== */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   SKILL CARD
+===================================================== */
+
+.skill-card {
+    position: relative;
+
+    min-height: 218px;
+
+    padding: 20px;
+
+    border: 1px solid #1756e9;
+
+    border-radius: 16px;
+
+    background:
+        radial-gradient(
+            circle at 90% 100%,
+            rgba(91, 0, 255, 0.22),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(5, 18, 50, 0.95),
+            rgba(3, 12, 34, 0.95)
+        );
+
+    overflow: hidden;
+
+    transition: 0.35s ease;
+}
+
+.skill-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    right: -60px;
+    bottom: -60px;
+
+    border-radius: 50%;
+
+    background: #7200ff;
+
+    filter: blur(60px);
+
+    opacity: 0.35;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #7547ff;
+
+    box-shadow:
+        0 0 20px rgba(67, 74, 255, 0.25);
+}
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Card icon */
+
+.card-icon {
+    min-width: 72px;
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    background:
+        radial-gradient(
+            circle,
+            #201067,
+            #090d2c
+        );
+
+    border: 1px solid #734cff;
+
+    box-shadow:
+        0 0 15px rgba(120, 55, 255, 0.65),
+        inset 0 0 15px rgba(128, 60, 255, 0.25);
+}
+
+.purple-icon {
+    color: #c084fc;
+}
+
+.blue-icon {
+    color: #45cfff;
+
+    border-color: #008cff;
+
+    box-shadow:
+        0 0 15px rgba(0, 180, 255, 0.65);
+}
+
+
+/* Title */
+
+.card-title-area {
+    flex: 1;
+}
+
+.card-title-area h2 {
+    font-size: 19px;
+
+    font-weight: 600;
+
+    margin-top: 2px;
+
+    margin-bottom: 4px;
+}
+
+.card-title-area p {
+    color: #c7d1ee;
+
+    font-size: 12.5px;
+
+    line-height: 1.55;
+}
+
+
+/* Arrow */
+
+.card-arrow {
+    color: #a855f7;
+
+    font-size: 17px;
+
+    padding-top: 10px;
+
+    transition: 0.3s ease;
+}
+
+.skill-card:hover .card-arrow {
+    transform: translateX(5px);
+
+    color: #d38aff;
+}
+
+
+/* =====================================================
+   SKILL ITEMS
+===================================================== */
+
+.skill-items {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 16px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Skill pill */
+
+.skill-pill {
+    min-height: 7px;
+
+    padding: 4px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    border-radius: 25px;
+
+    border: 1px solid #175cf4;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 28, 71, 0.85),
+            rgba(7, 17, 53, 0.9)
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.skill-pill:hover {
+    border-color: #a855f7;
+
+    box-shadow:
+        0 0 12px rgba(121, 63, 255, 0.45);
+
+    transform: translateY(-2px);
+}
+
+.skill-pill i {
+    font-size: 27px;
+}
+
+
+/* =====================================================
+   TOOL ICONS
+===================================================== */
+
+.custom-tool-icon {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+.antigravity-icon {
+    color: #e9d5ff;
+
+    font-size: 24px;
+}
+
+.stitch-icon {
+    color: #a78bfa;
+
+    font-size: 21px;
+}
+
+.python-ide-icon {
+    color: #38bdf8;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   WEB CARD
+===================================================== */
+
+.web-card {
+    grid-column: 1 / 2;
+}
+
+.flutter-pill {
+    min-width: 185px;
+    justify-content: flex-start;
+}
+
+
+/* =====================================================
+   OTHER SKILLS
+===================================================== */
+
+.other-card {
+    grid-column: 2 / 4;
+}
+
+
+.soft-skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.soft-pill {
+    min-height: 44px;
+
+    padding: 7px 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1px solid #185cff;
+
+    border-radius: 25px;
+
+    background:
+        rgba(6, 20, 57, 0.85);
+
+    color: #e7eaff;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.soft-pill:hover {
+    border-color: #a855f7;
+
+    box-shadow:
+        0 0 12px rgba(124, 58, 237, 0.4);
+
+    transform: translateY(-2px);
+}
+
+.soft-pill i {
+    color: #b66cff;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.stats-section {
+    width: 100%;
+
+    margin-top: 22px;
+
+    min-height: 94px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    align-items: center;
+
+    border: 1px solid #175cf4;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(5, 20, 53, 0.96),
+            rgba(7, 15, 45, 0.96)
+        );
+
+    box-shadow:
+        inset 0 0 30px rgba(32, 63, 170, 0.08);
+}
+
+
+/* Stat box */
+
+.stat-box {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    min-height: 55px;
+
+    padding: 10px 15px;
+
+    position: relative;
+}
+
+.stat-box:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    top: 8px;
+
+    width: 1px;
+
+    height: 65px;
+
+    background:
+        linear-gradient(
+            transparent,
+            #3158b7,
+            transparent
+        );
+}
+
+
+/* Stat icon */
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 29px;
+}
+
+
+/* Stat colors */
+
+.stat-icon.pink {
+    color: #ec5bff;
+
+    text-shadow:
+        0 0 15px #ec5bff;
+}
+
+.stat-icon.blue {
+    color: #20aaff;
+
+    text-shadow:
+        0 0 15px #20aaff;
+}
+
+.stat-icon.green {
+    color: #45e985;
+
+    text-shadow:
+        0 0 15px #45e985;
+}
+
+.stat-icon.orange {
+    color: #ffad2e;
+
+    text-shadow:
+        0 0 15px #ffad2e;
+}
+
+.stat-icon.purple {
+    color: #a855f7;
+
+    text-shadow:
+        0 0 15px #a855f7;
+}
+
+
+/* Stat info */
+
+.stat-info {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.stat-info strong {
+    font-size: 25px;
+
+    line-height: 1;
+
+    background: linear-gradient(
+        90deg,
+        #c026d3,
+        #6d5dfc
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-info span {
+    margin-top: 5px;
+
+    color: #d1d7ef;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .connect-btn {
+        padding: 10px 14px;
+    }
+
+    .skills-page {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .web-card {
+        grid-column: auto;
+    }
+
+    .other-card {
+        grid-column: 1 / -1;
+    }
+
+    .stats-section {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        padding: 10px;
+    }
+
+    .stat-box:nth-child(3)::after {
+        display: none;
+    }
+
+    .stat-box {
+        padding: 10px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .name {
+        font-size: 17px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        order: 3;
+
+        overflow-x: auto;
+
+        padding-bottom: 8px;
+
+        justify-content: flex-start;
+
+        gap: 22px;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
+    }
+
+    .nav-links a.active::after {
+        bottom: -8px;
+    }
+
+    .connect-btn {
+        margin-left: auto;
+    }
+
+
+    .skills-page {
+        padding: 25px 18px 35px;
+    }
+
+
+    .skills-hero {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+
+    .hero-content {
+        padding-left: 0;
+    }
+
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+
+    .hero-visual {
+        min-height: 270px;
+
+        transform: scale(0.9);
+    }
+
+
+    .grow-text {
+        right: 0;
+    }
+
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .other-card {
+        grid-column: auto;
+    }
+
+
+    .skill-card {
+        min-height: auto;
+    }
+
+
+    .stats-section {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 5px;
+
+        padding: 10px;
+    }
+
+
+    .stat-box {
+        justify-content: flex-start;
+    }
+
+
+    .stat-box::after {
+        display: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .logo-area {
+        gap: 10px;
+    }
+
+    .logo-line {
+        height: 28px;
+    }
+
+    .connect-btn {
+        font-size: 12px;
+
+        padding: 9px 12px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+
+    .hero-visual {
+        transform: scale(0.72);
+
+        margin-top: -25px;
+
+        margin-bottom: -30px;
+    }
+
+
+    .card-header {
+        gap: 10px;
+    }
+
+
+    .card-icon {
+        min-width: 58px;
+
+        width: 58px;
+        height: 58px;
+
+        font-size: 25px;
+    }
+
+
+    .card-title-area h2 {
+        font-size: 16px;
+    }
+
+
+    .card-title-area p {
+        font-size: 11px;
+    }
+
+
+    .skill-pill {
+        font-size: 12px;
+
+        padding: 7px 13px;
+    }
+
+
+    .soft-pill {
+        font-size: 11px;
+
+        padding: 7px 12px;
+    }
+
+
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+
+
+    .stat-box {
+        justify-content: center;
+
+        border-bottom: 1px solid rgba(70, 90, 150, 0.3);
+    }
+
+
+    .stat-box:last-child {
+        border-bottom: none;
+    }
+
+}

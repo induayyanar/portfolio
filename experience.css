@@ -1,0 +1,831 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #020617;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 78px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+
+    background: rgba(2, 6, 23, 0.96);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.18);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Logo */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: -5px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #a855f7,
+        #d946ef
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-name h2 {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.profile-name p {
+    font-size: 11px;
+    color: #cbd5e1;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: #c084fc;
+}
+
+nav a.active {
+    color: #c084fc;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -23px;
+
+    width: 100%;
+    height: 2px;
+
+    background: #a855f7;
+    box-shadow: 0 0 12px #a855f7;
+}
+
+
+/* Connect */
+
+.connect-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 20px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #9333ea,
+        #4f46e5
+    );
+
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.35);
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.connect-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.6);
+}
+
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience-section {
+    min-height: 100vh;
+    padding: 55px 6% 50px;
+
+    background:
+        radial-gradient(
+            circle at 80% 15%,
+            rgba(109, 40, 217, 0.13),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 15% 60%,
+            rgba(37, 99, 235, 0.08),
+            transparent 30%
+        ),
+        #020617;
+
+   .resume-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #c8a2ff;
+    border-radius: 8px;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+.view-btn {
+    padding: 10px 13px;
+
+    
+    color: #b365ff;
+
+    text-decoration: none;
+
+    
+
+    white-space: nowrap;
+}
+
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1400px;
+    margin: auto;
+
+    margin-bottom: 40px;
+}
+
+.header-content {
+    max-width: 600px;
+}
+
+.small-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #c084fc;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.small-title i {
+    font-size: 20px;
+}
+
+
+.header-content h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.header-content h1 span {
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #c084fc,
+        #6366f1
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Line */
+
+.title-line {
+    width: 158px;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #a855f7,
+        #7c3aed,
+        transparent
+    );
+
+    margin-bottom: 20px;
+}
+
+
+.header-content p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   HEADER ILLUSTRATION
+========================= */
+
+.header-illustration {
+    width: 330px;
+    height: 210px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #a855f7;
+
+    filter: drop-shadow(
+        0 0 25px rgba(139, 92, 246, 0.4)
+    );
+}
+
+.header-illustration > i:first-child {
+    font-size: 130px;
+    opacity: 0.8;
+}
+
+.header-illustration > i:nth-child(2) {
+    position: absolute;
+
+    right: 10px;
+    bottom: 20px;
+
+    font-size: 70px;
+}
+
+.header-illustration .leaf {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+
+    font-size: 55px;
+    transform: rotate(-25deg);
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    max-width: 1400px;
+    margin: auto;
+
+    position: relative;
+}
+
+
+/* Vertical Line */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 138px;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background: repeating-linear-gradient(
+        to bottom,
+        #7c3aed 0px,
+        #7c3aed 5px,
+        transparent 5px,
+        transparent 10px
+    );
+
+    opacity: 0.75;
+}
+
+
+/* Timeline Item */
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 115px 60px 1fr;
+
+    gap: 22px;
+
+    position: relative;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.date {
+    padding-top: 48px;
+
+    display: flex;
+    flex-direction: column;
+
+    color: #c084fc;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+.date small {
+    color: #cbd5e1;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   TIMELINE ICON
+========================= */
+
+.timeline-icon {
+    width: 60px;
+    height: 60px;
+
+    margin-top: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #050b22;
+
+    border: 1.5px solid #8b5cf6;
+
+    color: #c084fc;
+
+    font-size: 22px;
+
+    box-shadow:
+        0 0 20px rgba(139, 92, 246, 0.3),
+        inset 0 0 20px rgba(139, 92, 246, 0.08);
+
+    z-index: 5;
+}
+
+
+/* =========================
+   EXPERIENCE CARD
+========================= */
+
+.experience-card {
+    min-height: 225px;
+
+    display: grid;
+    grid-template-columns: 1fr 350px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(99, 102, 241, 0.6);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10, 20, 55, 0.95),
+            rgba(3, 10, 30, 0.95)
+        );
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35),
+        inset 0 0 30px rgba(76, 29, 149, 0.06);
+
+    transition: 0.35s;
+}
+
+.experience-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #a855f7;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(139, 92, 246, 0.18);
+}
+
+
+/* Card content */
+
+.card-content {
+    padding: 20px 22px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #ddd6fe;
+
+    background: linear-gradient(
+        90deg,
+        #4c1d95,
+        #6d28d9
+    );
+
+    margin-bottom: 10px;
+}
+
+
+.card-content h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+
+    color: #f8fafc;
+}
+
+.card-content h3 {
+    font-size: 16px;
+
+    color: #c084fc;
+
+    margin-bottom: 10px;
+}
+
+
+.card-content ul {
+    padding-left: 18px;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.card-content li {
+    margin-bottom: 2px;
+}
+
+
+/* Location */
+
+.location {
+    margin-top: 10px;
+
+    color: #e2e8f0;
+
+    font-size: 12px;
+}
+
+.location i {
+    color: #c084fc;
+    margin-right: 5px;
+}
+
+
+/* =========================
+   CARD IMAGE
+========================= */
+
+.card-image {
+    width: 100%;
+    height: 100%;
+
+    min-height: 225px;
+
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+.experience-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-box {
+    max-width: 950px;
+
+    margin: 18px auto 0;
+
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    border: 1px solid rgba(139, 92, 246, 0.5);
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10, 20, 55, 0.8),
+            rgba(5, 10, 30, 0.8)
+        );
+
+    box-shadow:
+        0 0 25px rgba(76, 29, 149, 0.12);
+}
+
+.quote-icon {
+    color: #a855f7;
+
+    font-size: 28px;
+
+    margin-right: 18px;
+}
+
+.quote-box p {
+    color: #e2e8f0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    flex: 1;
+}
+
+.mountain {
+    position: relative;
+
+    width: 110px;
+
+    text-align: center;
+
+    color: #8b5cf6;
+
+    font-size: 38px;
+}
+
+.mountain .fa-flag {
+    position: absolute;
+
+    top: -5px;
+    right: 30px;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .experience-card {
+        grid-template-columns: 1fr 300px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .navbar {
+        height: auto;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a.active::after {
+        bottom: -8px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-illustration {
+        display: none;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 60px 1fr;
+        gap: 15px;
+    }
+
+    .date {
+        position: absolute;
+        left: 80px;
+        top: -5px;
+        padding: 0;
+        z-index: 10;
+    }
+
+    .timeline-icon {
+        grid-column: 1;
+        margin-top: 30px;
+    }
+
+    .experience-card {
+        grid-column: 2;
+        margin-top: 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .profile-name h2 {
+        font-size: 15px;
+    }
+
+    .profile-name p {
+        font-size: 9px;
+    }
+
+    .logo {
+        font-size: 35px;
+    }
+
+    .connect-btn {
+        padding: 10px 13px;
+        font-size: 11px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .experience-section {
+        padding: 40px 20px;
+    }
+
+    .header-content h1 {
+        font-size: 38px;
+    }
+
+    .header-content p {
+        font-size: 14px;
+    }
+
+    .timeline::before {
+        left: 25px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 50px 1fr;
+    }
+
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .date {
+        left: 65px;
+        font-size: 11px;
+    }
+
+    .experience-card {
+        margin-top: 30px;
+    }
+
+    .card-content {
+        padding: 17px;
+    }
+
+    .card-content h2 {
+        font-size: 16px;
+    }
+
+    .card-content h3 {
+        font-size: 14px;
+    }
+
+    .card-content ul {
+        font-size: 11px;
+    }
+
+    .card-image {
+        height: 180px;
+        min-height: 180px;
+    }
+
+    .quote-box {
+        padding: 15px;
+    }
+
+    .quote-box p {
+        font-size: 11px;
+    }
+
+    .mountain {
+        display: none;
+    }
+}
